@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_hospital_appointment" model="ir.actions.act_window">
+        <field name="name">Hospital Appointment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+    </record>
+
+<!--    TREE VIEW-->
+    <record id="appointment_record_tree" model="ir.ui.view">
+        <field name="name">patient.record.tree</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient_id"/>
+                <field name="appointment_time" string='Appointment Time'/>
+                <field name="booking_date" string='Booking date'/>
+
+            </tree>
+        </field>
+    </record>
+
+
+<!--    FORM VIEW-->
+
+    <record id="view_appointment_record_form" model="ir.ui.view">
+        <field name="name">patient.record.form</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" nolabel="1" options="{'clickable':'1'}"
+                            statusbar_visible = "draft,in_consultant,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="appointment_time" string='Appointment Time'/>
+                        <field name="booking_date" string='Booking date'/>
+
+                    </group>
+                </sheet>
+                <!--                Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="appointment_menu"
+              name="Appointment"
+              parent="menu_hospital_root"/>
+
+    <menuitem id="appointment_menu_root"
+              name="Patient Appointment"
+              parent="appointment_menu"
+              action="action_hospital_appointment"
+              sequence="0"/>
+
+
+</odoo>

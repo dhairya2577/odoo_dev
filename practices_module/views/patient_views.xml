@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="patient_detail_action" model="ir.actions.act_window">
+        <field name="name">Hospital Patient</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+    </record>
+
+<!--    TREE VIEW-->
+    <record id="patient_record_tree" model="ir.ui.view">
+        <field name="name">patient.record.tree</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Patient Name"/>
+                <field name="age" string="Patient Age"/>
+                <field name="gender" string="Patient gender"/>
+                <field name="date_of_birth" string="Date of birth"/>
+            </tree>
+        </field>
+    </record>
+
+
+<!--    FORM VIEW-->
+
+    <record id="view_patient_record_form" model="ir.ui.view">
+        <field name="name">patient.record.form</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" string="Patient Name"/>
+                        <field name="age" string="Patient Age"/>
+                        <field name="gender" string="Patient gender" default="male"/>
+                        <field name="date_of_birth" string="Date of birth"/>
+                    </group>
+                </sheet>
+<!--                Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_hospital_root"
+              name="Hospital"
+              sequence="0"/>
+
+    <menuitem id="menu_patient_master"
+              name="Patient Details"
+              parent="menu_hospital_root"
+              sequence="0"/>
+
+    <menuitem id="menu_patient"
+              name="Patient"
+              parent="menu_patient_master"
+              action="patient_detail_action"
+              sequence="0"/>
+
+
+</odoo>
