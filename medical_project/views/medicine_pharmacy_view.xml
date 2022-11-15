@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<!--    TREE VIEW-->
+
+    <record id="medicine_pharmacy_record_tree" model="ir.ui.view">
+        <field name="name">medicine.pharmacy.record.tree</field>
+        <field name="model">medicine.pharmacy</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="medicine_name" string="Medicine Name"/>
+                <field name="quantity" string="Medicine Quantity"/>
+                <field name="price" string="Medicine Price"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    FORM VIEW-->
+
+    <record id="medicine_pharmacy_record_form" model="ir.ui.view">
+        <field name="name">medicine.pharmacy.record.form</field>
+        <field name="model">medicine.pharmacy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="medicine_name" string="Medicine Name"/>
+                        <field name="quantity" string="Medicine Quantity"/>
+                        <field name="price" string="Medicine Price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

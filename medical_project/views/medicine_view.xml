@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    ACTION FOR MENU-->
+
+    <record id="medicine_action_id" model="ir.actions.act_window">
+        <field name="name">Medicine</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medicine.medical</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="domain">[]</field>
+    </record>
+
+<!--    TREE VIEW-->
+
+    <record id="medicine_record_tree" model="ir.ui.view">
+        <field name="name">medicine.record.tree</field>
+        <field name="model">medicine.medical</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="medicine_id2" string="Medicine Name"/>
+                <field name="medicine_category" string="Medicine Category"/>
+                <field name="price_unit" string="Medicine Price"/>
+                <field name="currency_id" invisible="1"/>
+                <field name="quantity" string="Quantity"/>
+                <field name="tax_id" string="Taxes"/>
+                <field name="price_subtotal" string="Subtotal"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    FORM VIEW-->
+
+    <record id="medicine_record_form" model="ir.ui.view">
+        <field name="name">medicine.record.tree</field>
+        <field name="model">medicine.medical</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="medicine_id2" string="Medicine Name"/>
+                    <field name="medicine_category" string="Medicine Category"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="price_unit" string="Medicine Price"/>
+                    <field name="quantity" string="Quantity"/>
+                    <field name="tax_id" string="Taxes" widget="many2many_tags"/>
+                    <field name="price_tax" invisible="1"/>
+                    <field name="price_subtotal" string="Subtotal"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+<!--    MENUS-->
+
+    <menuitem id="medicine_main_menu"
+              name="Medicine"
+              parent="patient_main_menu"/>
+
+    <menuitem id="medicine_submenu_root"
+              name="medicine Details"
+              parent="medicine_main_menu"
+              action="medicine_action_id"/>
+</odoo>

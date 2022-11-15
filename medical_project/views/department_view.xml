@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<!--    ACTION FOR MENU-->
+
+    <record id="department_action_id" model="ir.actions.act_window">
+        <field name="name">Department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">department.medical</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="domain">[]</field>
+    </record>
+
+<!--    TREE VIEW-->
+
+    <record id="department_record_tree" model="ir.ui.view">
+        <field name="name">department.record.tree</field>
+        <field name="model">department.medical</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="department" string="Department"/>
+                <field name="department_seq" string="Department Seq"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    FORM VIEW-->
+
+    <record id="department_record_form" model="ir.ui.view">
+        <field name="name">department.record.tree</field>
+        <field name="model">department.medical</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="department" string="Department"/>
+                    <field name="department_seq" string="Department Seq"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+<!--    KANBAN VIEW-->
+
+    <record id="department_record_kanban" model="ir.ui.view">
+        <field name="name">department.record.kanban</field>
+        <field name="model">department.medical</field>
+        <field name="arch" type="xml">
+            <kanban string="Department Kanban" class="o_res_partner_kanban">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div>
+                                Department: <field name="department" string="Department"/>
+                                <br/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+<!--    MENUS-->
+
+    <menuitem id="department_main_menu"
+              name="Department"
+              parent="patient_main_menu"/>
+
+    <menuitem id="department_submenu_root"
+              name="Department Details"
+              parent="department_main_menu"
+              action="department_action_id"/>
+</odoo>

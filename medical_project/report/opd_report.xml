@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="opd_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <t t-if="doc.opd_state=='done'">
+                        <div class="page">
+                            <div class="text-right py-5" style="text-decoration:underline;">
+                                <strong>Today's Date:</strong>
+                                <t t-esc="doc.today_date"/>
+                            </div>
+                            <h4>Opd Report</h4>
+                            <hr/>
+                            <h5 class="mb-4">
+                                # <t t-esc="doc.opd_id"/>
+                            </h5>
+                            <div class="oe_structure mt10">
+                                <h6>Patient Info</h6>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <strong>Patient Name:</strong>
+                                        <t t-esc="doc.patient_id.patient_name"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Patient Number:</strong>
+                                        <t t-esc="doc.patient_number"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Patient Age:</strong>
+                                        <t t-esc="doc.patient_age"/>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <strong>Patient Dob:</strong>
+                                        <t t-esc="doc.patient_dob"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_structure mt-3 mb-3">
+                                <h6>Doctor Info</h6>
+                                <div class="row mt2 mb2 ">
+                                    <div class="col-4">
+                                        <strong>Doctor Name:</strong>
+                                        <t t-esc="doc.doctor_id.doctor_name"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Doctor Dept:</strong>
+                                        <t t-esc="doc.department_id.department"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Doctor Number:</strong>
+                                        <t t-esc="doc.doctor_number"/>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <table class="table table-dark table-bordered bg-warning mt-3" >
+                                    <thead>
+                                        <tr class="bg-warning">
+                                            <th name="th_medicine_id2" class="text-left">Medicine Name</th>
+                                            <th name="th_medicine_category" class="text-left">Medicine Category</th>
+                                            <th name="th_quantity" class="text-left">Medicine Quantity</th>
+                                            <th name="th_price_unit" class="text-left">Medicine Unit Price</th>
+                                            <th name="th_price_tax" class="text-left">Taxes</th>
+                                            <th name="th_price_subtotal" class="text-left">Medicine SubTotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.medicine_line" t-as="line">
+                                            <tr t-att-class="'bg-200 font-weight-bold o_line_section'">
+                                                <td name="td_name" class="table-info">
+                                                    <span t-field="line.medicine_id2"/>
+                                                </td>
+                                                <td name="td_category" class="text-left table-info">
+                                                    <span t-field="line.medicine_category"/>
+                                                </td>
+                                                <td name="td_quantity" class="text-left table-info">
+                                                    <span t-field="line.quantity"/>
+                                                </td>
+                                                <td name="td_price_unit" class="text-left table-info">
+                                                    <span t-field="line.price_unit"/>
+                                                </td>
+                                                <td name="td_price_tax" class="text-left table-info">
+                                                    <span t-field="line.tax_id"/>
+                                                </td>
+                                                <td name="td_price_subtotal" class="text-left table-info">
+                                                    <span t-field="line.price_subtotal"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <t t-if="doc.taxes">
+                                <div class="text-right" style="word-spacing:5px;">
+                                    <strong>Untax Amount:</strong>
+                                    <span t-field="doc.untaxed_amount"/>
+                                </div>
+                                <div class="text-right" style="word-spacing:5px; text-decoration:underline;">
+                                    <strong>Tax Amount:</strong>
+                                    <span t-field="doc.taxes"/>
+                                </div>
+                                <div class="text-right" style="word-spacing:5px;">
+                                    <strong>Total Amount:</strong>
+                                    <span t-field="doc.grand_total"/>
+                                </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="text-right" style="word-spacing:5px;">
+                                    <strong>Total Amount:</strong>
+                                    <span t-field="doc.grand_total"/>
+                                </div>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-elif="doc.opd_state=='draft'">
+                        <p>Sorry No report Available</p>
+                    </t>
+                    <t t-elif="doc.opd_state=='cancel'">
+                        <p>Sorry No report Available</p>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="opd_profile_report_temp" model="ir.actions.report">
+        <field name="name">Opd Card</field>
+        <field name="model">opd.medical</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">medical_project.opd_report_template</field>
+        <field name="report_file">medical_project.opd_report_template</field>
+        <field name="print_report_name">'Opd-Card'</field>
+        <field name="binding_model_id" ref="model_opd_medical"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

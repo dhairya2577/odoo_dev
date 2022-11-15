@@ -1,0 +1,807 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-10 13:32+0000\n"
+"PO-Revision-Date: 2022-11-10 13:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: medical_project
+#: model:ir.actions.report,print_report_name:medical_project.opd_profile_report_temp
+msgid "'Opd-Card'"
+msgstr "'ओपीडी-कार्ड'"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+msgid "<b>Address:</b>"
+msgstr "<b>पता:</b>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+msgid "<b>Age:</b>"
+msgstr "<b>आयु:</b>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+msgid "<b>Name:</b>"
+msgstr "<b>नाम:</b>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+msgid ""
+"<br/>\n"
+"                                Age:"
+msgstr ""
+"<br/>\n"
+"                                आयु:"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+msgid ""
+"<br/>\n"
+"                                Department:"
+msgstr ""
+"<br/>\n"
+"                                विभाग:"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_kanban
+msgid ""
+"<br/>\n"
+"                                Doctor Name:"
+msgstr ""
+"<br/>\n"
+"                                डॉक्टर का नाम:"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "<span class=\"o_stat_text\">Total OPD</span>"
+msgstr "<span class=\"o_stat_text\">कुल ओपीडी</span>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Doctor Dept:</strong>"
+msgstr "<strong>डॉक्टर विभाग:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Doctor Name:</strong>"
+msgstr "<strong>डॉक्टर का नाम:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Doctor Number:</strong>"
+msgstr "<strong>डॉक्टर नंबर:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Patient Age:</strong>"
+msgstr "<strong>रोगी की आयु:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Patient Dob:</strong>"
+msgstr "<strong>रोगी की जन्म तिथि:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Patient Name:</strong>"
+msgstr "<strong>रोगी का नाम:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Patient Number:</strong>"
+msgstr "<strong>रोगी नंबर:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Tax Amount:</strong>"
+msgstr "<strong>कर राशि:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Today's Date:</strong>"
+msgstr "<strong>आज की तारीख:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Total Amount:</strong>"
+msgstr "<strong>कुल राशि:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "<strong>Untax Amount:</strong>"
+msgstr "<strong>करमुक्त राशि:</strong>"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Add a Medicine"
+msgstr "एक दवा जोड़ें"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Add a note"
+msgstr "टिप्पणी जोड़ें"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Add a section"
+msgstr "एक अनुभाग जोड़ें"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Cancel"
+msgstr "रद्द करना"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__opd_medical__opd_state__cancel
+#: model:ir.model.fields.selection,name:medical_project.selection__patient_medical__state__cancel
+msgid "Cancelled"
+msgstr "रद्द"
+
+#. module: medical_project
+#: model:ir.module.category,description:medical_project.module_category_hospital
+msgid "Category For Clinic"
+msgstr "क्लिनिक के लिए श्रेणी"
+
+#. module: medical_project
+#: model:ir.module.category,name:medical_project.module_category_hospital
+msgid "Clinic Management"
+msgstr "क्लिनिक प्रबंधन"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__opd_medical__opd_state__confirm
+#: model:ir.model.fields.selection,name:medical_project.selection__patient_medical__state__confirm
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Confirm"
+msgstr "पुष्टि करें"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.create_opd_wizard
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Create OPD"
+msgstr "ओपीडी बनाएं"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+msgid "Create Opd"
+msgstr "ओपीडी बनाएं"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Create User"
+msgstr "उपयोगकर्ता बनाइये"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__create_uid
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__create_uid
+msgid "Created by"
+msgstr "के द्वारा बनाई गई"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__create_date
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__create_date
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__create_date
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__create_date
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__create_date
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__create_date
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__create_date
+msgid "Created on"
+msgstr "पर बनाया"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__currency_id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__currency_id
+msgid "Currency"
+msgstr "मुद्रा"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__date
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+msgid "Date"
+msgstr "दिनांक"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.department_action_id
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__dep_id
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__department
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__department_id
+#: model:ir.ui.menu,name:medical_project.department_main_menu
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_tree
+msgid "Department"
+msgstr "विभाग"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.department_submenu_root
+msgid "Department Details"
+msgstr "विभाग विवरण"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_kanban
+msgid "Department Kanban"
+msgstr "विभाग कानबानो"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Department Name"
+msgstr "विभाग का नाम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_tree
+msgid "Department Seq"
+msgstr "विभाग अनुक्रम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.department_record_kanban
+msgid "Department:"
+msgstr "विभाग"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__display_name
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__display_name
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__display_name
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__display_name
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__display_name
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__display_name
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__display_name
+msgid "Display Name"
+msgstr "प्रदर्शित होने वाला नाम"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.doctor_action_id
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__doc_id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__doctor_id
+#: model:ir.ui.menu,name:medical_project.doctor_main_menu
+#: model:res.groups,name:medical_project.group_clinic_doctor
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+msgid "Doctor"
+msgstr "चिकित्सक"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_address
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+msgid "Doctor Address"
+msgstr "डॉक्टर का पता"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_age
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+msgid "Doctor Age"
+msgstr "डॉक्टर की उम्र"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_dob
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+msgid "Doctor DOB"
+msgstr "डॉक्टर की जन्म तिथि"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+msgid "Doctor Department"
+msgstr "डॉक्टर विभाग"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.doctor_submenu_root
+msgid "Doctor Details"
+msgstr "डॉक्टर विवरण"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Doctor Info"
+msgstr "डॉक्टर की जानकारी"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+msgid "Doctor Kanban"
+msgstr "डॉक्टर कानबन"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_name
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_tree
+msgid "Doctor Name"
+msgstr "डॉक्टर का नाम"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_number
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__doctor_number
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Doctor Number"
+msgstr "डॉक्टर नंबर"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_tree
+msgid "Doctor Seq"
+msgstr "डॉक्टर अनुक्रम"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__department_seq
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doc_seq
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_seq
+msgid "Doctor seq"
+msgstr "डॉक्टर अनुक्रम"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__opd_medical__opd_state__done
+#: model:ir.model.fields.selection,name:medical_project.selection__patient_medical__state__done
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Done"
+msgstr "पूर्ण"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__opd_medical__opd_state__draft
+#: model:ir.model.fields.selection,name:medical_project.selection__patient_medical__state__draft
+msgid "Draft"
+msgstr "प्रारूप"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__id
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__id
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__id
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__id
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__id
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__id
+msgid "ID"
+msgstr "पहचान"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd____last_update
+#: model:ir.model.fields,field_description:medical_project.field_department_medical____last_update
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical____last_update
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical____last_update
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy____last_update
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical____last_update
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical____last_update
+msgid "Last Modified on"
+msgstr "अंतिम बार संशोधित"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__write_uid
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__write_uid
+msgid "Last Updated by"
+msgstr "पिछली बार अपडेट किया गया"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__write_date
+#: model:ir.model.fields,field_description:medical_project.field_department_medical__write_date
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__write_date
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__write_date
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__write_date
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__write_date
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__write_date
+msgid "Last Updated on"
+msgstr "अंतिम बार अद्यतन किया गया"
+
+#. module: medical_project
+#: model:res.groups,name:medical_project.group_clinic_manager
+msgid "Manager"
+msgstr "प्रबंधक"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.patient_main_menu
+msgid "Medical"
+msgstr "चिकित्सा"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.medicine_action_id
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__medicine_id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__medicine_line
+#: model:ir.ui.menu,name:medical_project.medicine_main_menu
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Medicine"
+msgstr "दवा"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Medicine Category"
+msgstr "चिकित्सा श्रेणी"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__medicine_id
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__medicine_id2
+#: model:ir.model.fields,field_description:medical_project.field_medicine_pharmacy__medicine_name
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_pharmacy_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_pharmacy_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Medicine Name"
+msgstr "दवा का नाम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Medicine Price"
+msgstr "दवा की कीमत"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__quantity
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Medicine Quantity"
+msgstr "दवा मात्रा"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Medicine SubTotal"
+msgstr "मेडिसिन सबटोटल"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Medicine Unit Price"
+msgstr "मेडिसिन यूनिट मूल्य"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Medicines"
+msgstr "दवाइयाँ"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.doctor_record_kanban
+msgid "Name:"
+msgstr "नाम:"
+
+#. module: medical_project
+#: code:addons/medical_project/models/department.py:0
+#: code:addons/medical_project/models/department.py:0
+#: code:addons/medical_project/models/doctor.py:0
+#: code:addons/medical_project/models/doctor.py:0
+#: code:addons/medical_project/models/opd.py:0
+#: code:addons/medical_project/models/opd.py:0
+#: code:addons/medical_project/models/patient.py:0
+#: code:addons/medical_project/models/patient.py:0
+#, python-format
+msgid "New"
+msgstr "नया"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.opd_action_id
+#: model:ir.ui.menu,name:medical_project.opd_main_menu
+msgid "OPD"
+msgstr "ओपीडी"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__total_opd
+msgid "OPD Count"
+msgstr "ओपीडी गणना"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.opd_submenu_root
+msgid "OPD Details"
+msgstr "ओपीडी विवरण"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_kanban
+msgid "OPD Kanban"
+msgstr "ओपीडी कानबन"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__medicine_medical__medicine_category__ointment
+msgid "Ointment"
+msgstr "मलहम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_tree
+msgid "Opd"
+msgstr "ओपीडी"
+
+#. module: medical_project
+#: model:ir.actions.report,name:medical_project.opd_profile_report_temp
+msgid "Opd Card"
+msgstr "ओपीडी कार्ड"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__opd_count
+msgid "Opd Count"
+msgstr "ओपीडी गणना"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Opd Report"
+msgstr "ओपीडी रिपोर्ट"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__opd_id
+msgid "Opd seq"
+msgstr "ओपीडी क्रम"
+
+#. module: medical_project
+#: model:ir.actions.act_window,name:medical_project.patient_action_id
+#: model:ir.ui.menu,name:medical_project.patient_submenu
+#: model:res.groups,name:medical_project.group_clinic_patient
+msgid "Patient"
+msgstr "मरीज़"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__address
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_address
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient Address"
+msgstr "रोगी का पता"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__age
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__patient_age
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_age
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+msgid "Patient Age"
+msgstr "रोगी की आयु"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__dob
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__patient_dob
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_dob
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient DOB"
+msgstr "रोगी जन्म तिथि"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.patient_submenu_root
+msgid "Patient Details"
+msgstr "रोगी विवरण"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Patient Info"
+msgstr "रोगी जानकारी"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+msgid "Patient Kanban"
+msgstr "रोगी कानबान"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_create_opd__patient_id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__patient_id
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_name
+#: model_terms:ir.ui.view,arch_db:medical_project.create_opd_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_kanban
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient Name"
+msgstr "रोगी का नाम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_kanban
+msgid "Patient Name:"
+msgstr "रोगी का नाम:"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__patient_number
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__patient_number
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient Number"
+msgstr "रोगी नंबर"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient Seq"
+msgstr "रोगी अनुक्रम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Patient age"
+msgstr "रोगी की आयु"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "Patient seq"
+msgstr "रोगी अनुक्रम"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Quantity"
+msgstr "मात्रा"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Sorry No report Available"
+msgstr "क्षमा करें कोई रिपोर्ट उपलब्ध नहीं है"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__state
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_tree
+msgid "Status"
+msgstr "दर्जा"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__opd_state
+msgid "Status Opd"
+msgstr "स्थिति ओपीडी"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__price_subtotal
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Subtotal"
+msgstr "उप-योग"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__medicine_medical__medicine_category__syrup
+msgid "Syrup"
+msgstr "सिरप"
+
+#. module: medical_project
+#: model:ir.model.fields.selection,name:medical_project.selection__medicine_medical__medicine_category__tablet
+msgid "Tablet"
+msgstr "गोली"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__tax_id
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__taxes
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.medicine_record_tree
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_report_template
+msgid "Taxes"
+msgstr "करों"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__today_date
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+msgid "Today Date"
+msgstr "आज की तारीख़"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__grand_total
+msgid "Total Amount"
+msgstr "कुल राशि"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__price_tax
+msgid "Total Tax"
+msgstr "कुल कर"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__price_unit
+msgid "Unit Price"
+msgstr "यूनिट मूल्य"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__untaxed_amount
+msgid "Untaxed Amount"
+msgstr "कर रहित राशि"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__color
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__color
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__color
+msgid "color"
+msgstr "रंग"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_opd_medical__company_id
+msgid "company"
+msgstr "कंपनी"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_create_opd
+msgid "create.opd"
+msgstr "ओपीडी.बनाएं"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__department_id
+msgid "department"
+msgstr "विभाग"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_department_medical
+msgid "department.medical"
+msgstr "विभाग.चिकित्सा"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_doctor_medical
+msgid "doctor.medical"
+msgstr "चिकित्सक.चिकित्सा"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_medicine_medical__medicine_category
+msgid "medicine Category"
+msgstr "दवा श्रेणी"
+
+#. module: medical_project
+#: model:ir.ui.menu,name:medical_project.medicine_submenu_root
+msgid "medicine Details"
+msgstr "दवा विवरण"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_medicine_medical
+msgid "medicine.medical"
+msgstr "दवा.चिकित्सा"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_medicine_pharmacy
+msgid "medicine.pharmacy"
+msgstr "औषध.फार्मेसी"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_opd_medical
+msgid "opd.medical"
+msgstr "ओपीडी.मेडिकल"
+
+#. module: medical_project
+#: model:ir.model,name:medical_project.model_patient_medical
+msgid "patient.medical"
+msgstr "रोगी.चिकित्सा"
+
+#. module: medical_project
+#: model_terms:ir.ui.view,arch_db:medical_project.opd_record_form
+#: model_terms:ir.ui.view,arch_db:medical_project.patient_record_form
+msgid "reset to draft"
+msgstr "ड्राफ्ट पर रीसेट करें"
+
+#. module: medical_project
+#: model:ir.model.fields,field_description:medical_project.field_doctor_medical__doctor_user_id
+#: model:ir.model.fields,field_description:medical_project.field_patient_medical__user_id
+msgid "user id"
+msgstr "यूज़र आईडी"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="create_opd_form" model="ir.ui.view">
+        <field name="name">create.opd.wizard</field>
+        <field name="model">create.opd</field>
+        <field name="arch" type="xml">
+            <form string="Create Opd">
+                <group>
+                    <group>
+                        <field name="patient_id" string="Patient Name"/>
+                        <field name="address" string="Patient Address"/>
+                        <field name="age" string="Patient Age"/>
+                        <field name="dob" string="Patient DOB"/>
+                    </group>
+                    <group>
+                        <field name="date" string="Date"/>
+                        <field name="dep_id" string="Department"/>
+                        <field name="doc_id" string="Doctor"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Medicine">
+                        <group>
+                            <field name="medicine_id" string="Medicines"/>
+                        </group>
+                    </page>
+                </notebook>
+                <footer>
+
+                    <button name="create_opd" string="Create OPD" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_opd_wizard" model="ir.actions.act_window">
+        <field name="name">Create OPD</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.opd</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_opd_form"/>
+        <field name="target">new</field>
+        <field name="domain">[]</field>
+    </record>
+</odoo>

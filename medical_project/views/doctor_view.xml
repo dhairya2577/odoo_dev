@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    ACTION FOR MENU -->
+
+    <record id="doctor_action_id" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">doctor.medical</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <!--    TREE VIEW-->
+
+    <record id="doctor_record_tree" model="ir.ui.view">
+        <field name="name">doctor.record.tree</field>
+        <field name="model">doctor.medical</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="doc_seq" string="Doctor Seq"/>
+                <field name="doctor_name" string="Doctor Name"/>
+                <field name="doctor_address" string="Doctor Address"/>
+                <field name="doctor_age" string="Doctor Age"/>
+                <field name="doctor_dob" string="Doctor DOB"/>
+                <field name="doctor_number" string="Doctor Number"/>
+                <field name="department_id" string="Doctor Department"/>
+            </tree>
+        </field>
+    </record>
+
+
+<!--    Form VIEW-->
+
+    <record id="doctor_record_form" model="ir.ui.view">
+        <field name="name">doctor.record.form</field>
+        <field name="model">doctor.medical</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="create_user_doctor" string="Create User" class="oe_highlight" type="object"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="total_opds" class="oe_stat_button" type="object" icon="fa-pencil-square-o">
+                            <div class="o_stat_info">
+                                <field name="opd_count" class="o_stat_value"/>
+                                <span class="o_stat_text">Total OPD</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="doc_seq" string="Doctor Seq"/>
+                            <field name="doctor_name" string="Doctor Name"/>
+                            <field name="doctor_address" string="Doctor Address"/>
+                            <field name="doctor_age" string="Doctor Age"/>
+                        </group>
+                        <group>
+                            <field name="doctor_number" string="Doctor Number"/>
+                            <field name="department_id" string="Doctor Department"/>
+                            <field name="doctor_dob" string="Doctor DOB"/>
+                            <field name="color"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+<!--    KANBAN VIEW-->
+
+    <record id="doctor_record_kanban" model="ir.ui.view">
+        <field name="name">doctor.record.kanban</field>
+        <field name="model">doctor.medical</field>
+        <field name="arch" type="xml">
+            <kanban string="Doctor Kanban" class="o_res_partner_kanban">
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+                            <div>
+                                Name: <field name="doctor_name" string="Doctor Name"/>
+                                <br/>
+                                Age: <field name="doctor_age" string="Doctor Age"/>
+                                <br/>
+                                Department: <field name="department_id" string="Doctor Department"/>
+                                <br/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+
+    <!--    MENUS-->
+
+    <menuitem id="doctor_main_menu"
+              name="Doctor"
+              parent="patient_main_menu"/>
+
+    <menuitem id="doctor_submenu_root"
+              name="Doctor Details"
+              parent="doctor_main_menu"
+              action="doctor_action_id"/>
+</odoo>
+

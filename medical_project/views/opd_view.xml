@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--    ACTIONS FOR MENU-->
+
+    <record id="opd_action_id" model="ir.actions.act_window">
+        <field name="name">OPD</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">opd.medical</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!--    Sequence -->
+
+
+    <record id="seq_opd" model="ir.sequence">
+        <field name="name">OPD</field>
+        <field name="code">opd.medical</field>
+        <field name="prefix">OP</field>
+        <field name="padding">4</field>
+    </record>
+
+    <!--    TREE VIEW-->
+
+    <record id="opd_record_tree" model="ir.ui.view">
+        <field name="name">opd.record.tree</field>
+        <field name="model">opd.medical</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="opd_id" string="Opd"/>
+                <field name="patient_id" string="Patient Name"/>
+                <field name="patient_number" string="Patient Number"/>
+                <field name="currency_id" invisible="1"/>
+                <field name="doctor_id" string="Doctor Name" widget="many2one_doctor_name"/>
+                <field name="opd_state" string="Status" widget="badge"
+                       decoration-success="opd_state=='done'" decoration-info="opd_state=='draft'"
+                       decoration-danger="opd_state=='cancel'" decoration-warning="opd_state=='confirm'"/>
+            </tree>
+        </field>
+    </record>
+    <!--    Form VIEW-->
+
+    <record id="opd_record_form" model="ir.ui.view">
+        <field name="name">opd.record.form</field>
+        <field name="model">opd.medical</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                        <button name="action_opd_confirm" string="Confirm" class="oe_highlight" type="object"
+                                attrs="{'invisible': [('opd_state', 'not in', ['draft'])]}"/>
+                        <button name="action_opd_cancel" type="object" string="Cancel"
+                                attrs="{'invisible': [('opd_state', 'not in', ['draft','confirm','done'])]}"/>
+                        <button name="action_opd_done" type="object" class="oe_highlight" string="Done"
+                                attrs="{'invisible': [('opd_state', 'not in', ['confirm'])]}"/>
+                        <button name="action_opd_draft" type="object" string="reset to draft"
+                                attrs="{'invisible': [('opd_state', 'not in', ['cancel'])]}"/>
+                        <field name="opd_state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                    </header>
+                    <group>
+                        <group>
+                            <field name="opd_id" string="Opd"/>
+                            <field name="today_date" string="Today Date"/>
+                            <field name="patient_id" string="Patient Name"/>
+                            <field name="patient_number" string="Patient Number"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="color"/>
+                        </group>
+                        <group>
+                            <field name="doctor_number" string="Doctor Number"/>
+                            <field name="department_id" string="Department Name"/>
+                            <field name="doctor_id" string="Doctor Name"/>
+                            <field name="patient_age" string="Patient Age"/>
+                            <field name="patient_dob" string="Patient DOB"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Medicine">
+                            <group>
+                                <field name="medicine_line" string="Medicines">
+                                    <tree editable="bottom">
+                                        <control>
+                                            <create string="Add a Medicine"/>
+                                            <create string="Add a section"
+                                                    context="{'default_display_type': 'line_section'}"/>
+                                            <create string="Add a note"
+                                                    context="{'default_display_type': 'line_note'}"/>
+                                        </control>
+                                        <field name="medicine_id2" string="Medicine Name"/>
+                                        <field name="medicine_category" string="Medicine Category"/>
+                                        <field name="price_unit" string="Medicine Price"/>
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="quantity" string="Quantity"/>
+                                        <field name="tax_id" string="Taxes" widget="many2many_tags" options="{'no_create': True}"/>
+                                        <field name="price_tax" invisible="1"/>
+                                        <field name="price_subtotal" string="Subtotal"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="untaxed_amount" attrs="{'invisible':[('taxes','=',0)]}" />
+                                <field name="taxes" attrs="{'invisible':[('taxes','=',0)]}"/>
+                                <field name="grand_total" style="text-decoration: overline;"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    KANBAN VIEW-->
+
+    <record id="opd_record_kanban" model="ir.ui.view">
+        <field name="name">opd.record.kanban</field>
+        <field name="model">opd.medical</field>
+        <field name="arch" type="xml">
+            <kanban string="OPD Kanban" class="o_res_partner_kanban">
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click">
+                            <div>
+                                Patient Name:
+                                <field name="patient_id" string="Patient Name"/>
+                                <br/>
+                                Doctor Name:
+                                <field name="doctor_id" string="Doctor Name"/>
+                                <br/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!--menus-->
+
+    <menuitem id="opd_main_menu"
+              name="OPD"
+              parent="patient_main_menu"
+              sequence="30"/>
+
+    <menuitem id="opd_submenu_root"
+              name="OPD Details"
+              parent="opd_main_menu"
+              action="opd_action_id"/>
+</odoo>
+
+

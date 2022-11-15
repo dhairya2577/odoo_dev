@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="department_record_demo_1" model="department.medical">
+        <field name="department"> MBBS </field>
+        </record>
+
+        <record id="department_record_demo_2" model="department.medical">
+        <field name="department"> orthopedic </field>
+        </record>
+
+        <record id="seq_dept" model="ir.sequence">
+            <field name="name">Department</field>
+            <field name="code">dept.medical</field>
+            <field name="prefix">DT</field>
+            <field name="padding">4</field>
+        </record>
+
+    </data>
+</odoo>
